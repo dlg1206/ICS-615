@@ -1,0 +1,3 @@
+[submodule "assignment2/spring-boot"]
+	path = assignment2/spring-boot
+	url = git@github.com:spring-projects/spring-boot.git
