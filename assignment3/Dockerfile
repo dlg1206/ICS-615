@@ -9,6 +9,8 @@ RUN go install
 
 # create toolbox
 FROM python:3.9.21-alpine3.21 AS toolbox
+ENV PATH=/home/hobbes/.local/bin:$PATH
+RUN apk add --no-cache git
 # create user
 RUN adduser -D hobbes
 WORKDIR /home/hobbes
@@ -18,5 +20,5 @@ COPY --from=trufflehog_build /go/bin/trufflehog /usr/local/bin/
 # install bandit
 USER hobbes
 RUN pip install --user --no-cache-dir bandit
-# todo - add custom scripts
+
 ENTRYPOINT ["ash"]
