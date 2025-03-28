@@ -1,0 +1,983 @@
+Run started:2025-03-28 22:59:35.966931
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/DankMethods.py:61:2
+60	  # We need to use numpy style array slicing manually to call strided slice.
+61	  assert value.shape[axis] == numSplits, 'shape must equal axis'
+62	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/DankMethods.py:85:4
+84	    # Split by subscript - requires special case
+85	    assert value.shape[axis] == numSplits, 'shape must equal axis'
+86	    for i in xrange(axis):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/DankMethods.py:87:6
+86	    for i in xrange(axis):
+87	      assert value.shape[i] == 1, 'must be filled with 1 shape until axis'
+88	    for i in xrange(axis):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/DankMethods.py:163:2
+162	    return math_ops.mat_mul(value1, value2)
+163	  assert is_power2(numSplits), 'beam size must be power of 2'
+164	  numSplits = calcSplits(numSplits)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/evaluate.py:192:2
+191	def main(unused_argv):
+192	  assert FLAGS.input_file_pattern, "--input_file_pattern is required"
+193	  assert FLAGS.checkpoint_dir, "--checkpoint_dir is required"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/evaluate.py:193:2
+192	  assert FLAGS.input_file_pattern, "--input_file_pattern is required"
+193	  assert FLAGS.checkpoint_dir, "--checkpoint_dir is required"
+194	  assert FLAGS.eval_dir, "--eval_dir is required"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/evaluate.py:194:2
+193	  assert FLAGS.checkpoint_dir, "--checkpoint_dir is required"
+194	  assert FLAGS.eval_dir, "--eval_dir is required"
+195	  run()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:50:4
+49	    """Compares Captions by score."""
+50	    assert isinstance(other, Caption)
+51	    if self.score == other.score:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:60:4
+59	  def __lt__(self, other):
+60	    assert isinstance(other, Caption)
+61	    return self.score < other.score
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:65:4
+64	  def __eq__(self, other):
+65	    assert isinstance(other, Caption)
+66	    return self.score == other.score
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:77:4
+76	  def size(self):
+77	    assert self._data is not None
+78	    return len(self._data)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:82:4
+81	    """Pushes a new element."""
+82	    assert self._data is not None
+83	    if len(self._data) < self._n:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:99:4
+98	    """
+99	    assert self._data is not None
+100	    data = self._data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/caption_generator.py:152:4
+151	    eps = 0.0001
+152	    assert abs(sum(temp_probs)-1.0) < eps
+153	    w_and_p = [(wp[0],temp_probs[j]) for j,wp in enumerate(w_and_p)]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/im2txt/inference_utils/caption_generator.py:156:10
+155	    for i in range(num_picks):
+156	      x = random.uniform(0, 1)
+157	      cumulative_probability = 0.0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/vocabulary.py:53:4
+52	    reverse_vocab = [y[0] for y in x]
+53	    assert start_word in vocab
+54	    assert end_word in vocab
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/vocabulary.py:54:4
+53	    assert start_word in vocab
+54	    assert end_word in vocab
+55	    assert unk_word in vocab
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/inference_utils/vocabulary.py:55:4
+54	    assert end_word in vocab
+55	    assert unk_word in vocab
+56	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/ops/image_embedding_test.py:49:8
+48	        num_params = v.get_shape().num_elements()
+49	        assert num_params
+50	        counter[name] = counter.get(name, 0) + num_params
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/ops/image_processing.py:109:2
+108	  # Resize image.
+109	  assert (resize_height > 0) == (resize_width > 0)
+110	  if resize_height:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/show_and_tell_model.py:53:4
+52	    """
+53	    assert mode in ["train", "eval", "inference"]
+54	    self.config = config
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/show_and_tell_model.py:171:6
+170	                                                            ################################### DONT NEED ABOVE, CHANGE BELOW
+171	      assert self.config.num_preprocess_threads % 2 == 0
+172	      images_and_captions = []
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/im2txt/show_and_tell_model_test.py:69:6
+68	      num_params = v.get_shape().num_elements()
+69	      assert num_params
+70	      counter[name] = counter.get(name, 0) + num_params
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/preprocessor.py:53:12
+52	            #use img.thumbnail for square images, img.resize for non square
+53	            assert np.shape(img) == (227, 227, 3)
+54	        except AssertionError:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/preprocessor.py:66:8
+65	        meme_vector = np.reshape(meme_vector,[4096])
+66	        assert np.shape(meme_vector) == (4096,)
+67	        match = [s.split('-',1)[-1].lstrip() for s in captions if meme_name in s]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/preprocessor.py:71:8
+70	        meme_vectors = [meme_vector for cap in match]
+71	        assert len(meme_vectors) == len(match)
+72	        data_memes.extend(meme_vectors)
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraper.py:23:8
+22	
+23	    r = requests.get(url)
+24	    soup = BeautifulSoup(r.text,'html.parser')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/scraper.py:28:4
+27	    imgs = [char.find('img') for char in chars]
+28	    assert len(links) == len(imgs)
+29	    for j,img in enumerate(imgs):
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraper.py:32:19
+31	        img_url = img['src']
+32	        response = requests.get(img_url, stream=True)
+33	        name_of_file = img_url.split('/')[-1]
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraper.py:41:16
+40	
+41	            R = requests.get(URL)
+42	            SOUP = BeautifulSoup(R.text,'html.parser')
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b108_hardcoded_tmp_directory.html
+   Location: /code/tf-coreml/tests/test_pretrained_models.py:17:16
+16	_module_dir = os.path.dirname(os.path.abspath(__file__))
+17	TMP_MODEL_DIR = '/tmp/tfcoreml'
+18	TEST_IMAGE = os.path.join(_module_dir, 'test_images', 'beach.jpg')
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: /code/tf-coreml/tests/test_pretrained_models.py:40:4
+39	  if not os.path.exists(fpath):
+40	    urlretrieve(url, fpath)
+41	  if ftype == 'tgz':
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/tf-coreml/tests/test_pretrained_models.py:43:4
+42	    tar = tarfile.open(fpath)
+43	    tar.extractall(dir_path)
+44	    tar.close()
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/tf-coreml/tests/test_pretrained_models.py:47:4
+46	    zip_ref = zipfile.ZipFile(fpath, 'r')
+47	    zip_ref.extractall(dir_path)
+48	    zip_ref.close()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_interpret_shapes.py:29:6
+28	    else:
+29	      assert False, 'Incorrect dim label value'
+30	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_interpret_shapes.py:264:12
+263	              print('interpreted shape of tensor \'{}\' is {}\n'.format(blob_name,str(context.dim_labels[blob_name])))
+264	            assert len(context.dim_labels[blob_name]) == len(shape), (
+265	                'labeled dimensions length not equal to the length its shape for Tensor %s' %
+266	                blob_name)
+267	            _labeled_dims_to_rank_4_shape(blob_name, context)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:142:4
+141	      identity_op = op.inputs[1].op
+142	    assert identity_op.type == 'Identity', (
+143	        'Weight input has to be an identity op')
+144	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:145:4
+144	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+145	    assert W_name in context.consts, (
+146	        'Value not found for {}'.format(W_name))
+147	    W = context.consts[W_name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:153:4
+152	  if op.type == 'QuantizedConv2D':
+153	    assert op.inputs[4].name in context.consts, (
+154	            'minimum value of quantized weights not available')
+155	    assert op.inputs[5].name in context.consts, (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:155:4
+154	            'minimum value of quantized weights not available')
+155	    assert op.inputs[5].name in context.consts, (
+156	        'maximum value of quantized weights not available')
+157	    min_W = context.consts[op.inputs[4].name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:162:6
+161	    else:
+162	      assert False, (
+163	        'Only uint8 weights handled currently by the converter')
+164	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:328:4
+327	    identity_op = op.inputs[1].op
+328	    assert identity_op.type == 'Identity', (
+329	        'Weight input has to be an identity op')
+330	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:331:4
+330	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+331	    assert W_name in context.consts, (
+332	        'Value not found for {}'.format(W_name))
+333	    W = context.consts[W_name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:422:4
+421	    identity_op = op.inputs[1].op
+422	    assert identity_op.type == 'Identity', (
+423	        'Weight input has to be an identity op')
+424	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:425:4
+424	    W_name = compat.as_str_any(identity_op.inputs[0].name)
+425	    assert W_name in context.consts, (
+426	        'Value not found for {}'.format(W_name))
+427	    W = context.consts[W_name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:428:2
+427	    W = context.consts[W_name]
+428	  assert not op.get_attr('transpose_a') and not op.get_attr('transpose_b'), (
+429	      'Transpose on inputs not supported')
+430	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:581:2
+580	def sub(op, context):
+581	  assert len(op.inputs) == 2, 'Sub op currently supports only two inputs'
+582	  output_name = compat.as_str_any(op.outputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:650:2
+649	def constant(op, context):
+650	  assert compat.as_str_any(op.outputs[0].name) in context.consts, (
+651	      'Value for {} not found'.format(op.outputs[0].name))
+652	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:655:2
+654	  output_name = compat.as_str_any(op.outputs[0].name)
+655	  assert len(op.inputs) == 2, 'Op Greater sees more than 2 inputs'
+656	  assert len(op.inputs[1].shape) == 0, "Op Greater conversion can't handle non-constant"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:656:2
+655	  assert len(op.inputs) == 2, 'Op Greater sees more than 2 inputs'
+656	  assert len(op.inputs[1].shape) == 0, "Op Greater conversion can't handle non-constant"
+657	  input_name = compat.as_str_any(op.inputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:687:2
+686	
+687	  assert start_ind == 0, 'Prod: only start index = 0 case supported'
+688	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:694:4
+693	  else:
+694	    assert False, 'Reduce Sum axis case not handled currently'
+695	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:710:2
+709	
+710	  assert compat.as_str_any(op.get_attr('mode')) != 'SYMMETRIC', \
+711	      'symmetric mode is not supported by Core ML'
+712	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:762:4
+761	  else:
+762	    assert False, 'Padding case not supported'
+763	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:802:2
+801	
+802	  assert (len(shape) == 4), ('Resize Nearest Neighbour: unrecognized 4-D shape. Input shape = {}'.
+803	                             format(str(shape)))
+804	  assert (output_spatial_sizes[0] % shape[1] == 0), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:804:2
+803	                             format(str(shape)))
+804	  assert (output_spatial_sizes[0] % shape[1] == 0), \
+805	    ('Resize Nearest Neighbour: height upsampling factor must be an integer. '
+806	     'Input height = {}, output height = {}, ratio = {}'.format(shape[1],output_spatial_sizes[0],output_spatial_sizes[0]/shape[1]))
+807	  assert (output_spatial_sizes[1] % shape[2] == 0), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:807:2
+806	     'Input height = {}, output height = {}, ratio = {}'.format(shape[1],output_spatial_sizes[0],output_spatial_sizes[0]/shape[1]))
+807	  assert (output_spatial_sizes[1] % shape[2] == 0), \
+808	    ('Resize Nearest Neighbour: width upsampling factor must be an integer. '
+809	     'Input width = {}, output width = {}, ratio = {}'.format(shape[2],output_spatial_sizes[1],output_spatial_sizes[1]/shape[2]))
+810	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:832:2
+831	
+832	  assert (len(shape) == 4), ('Resize Bilinear: unrecognized 4-D shape. Input shape = {}'.
+833	                             format(str(shape)))
+834	  assert (output_spatial_sizes[0] % shape[1] == 0), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:834:2
+833	                             format(str(shape)))
+834	  assert (output_spatial_sizes[0] % shape[1] == 0), \
+835	    ('Resize Bilinear: height upsampling factor must be an integer. '
+836	     'Input height = {}, output height = {}, ratio = {}'.format(shape[1],output_spatial_sizes[0],output_spatial_sizes[0]/shape[1]))
+837	  assert (output_spatial_sizes[1] % shape[2] == 0), \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:837:2
+836	     'Input height = {}, output height = {}, ratio = {}'.format(shape[1],output_spatial_sizes[0],output_spatial_sizes[0]/shape[1]))
+837	  assert (output_spatial_sizes[1] % shape[2] == 0), \
+838	    ('Resize Bilinear: width upsampling factor must be an integer. '
+839	     'Input width = {}, output width = {}, ratio = {}'.format(shape[2],output_spatial_sizes[1],output_spatial_sizes[1]/shape[2]))
+840	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:858:2
+857	def transpose(op, context):
+858	  assert len(op.inputs) == 2, 'Op Greater sees more than 2 inputs'
+859	  output_name = compat.as_str_any(op.outputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:866:2
+865	    axes = list(context.consts[param_name])
+866	  assert len(axes) == 4, "Op Transpose conversion only works with 4D tensors"
+867	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:947:2
+946	
+947	  assert (isinstance(axis_tf, int) or isinstance(axis_tf, np.int32) or isinstance(axis_tf, np.int)), ('Argmax: Only case that is convertible is when axis is an integer. '
+948	                                                                                                      'Input shape = {}, output shape = {}, axis = {}'.
+949	                                                                                                       format(str(input_shape), str(output_shape), str(axis_tf)))
+950	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:960:4
+959	  else:
+960	    assert False,('ArgMax: Axis translation case not handled currently. '
+961	                  'Input shape = {}, output shape = {}, axis = {}'.
+962	                  format(str(input_shape), str(output_shape), str(axis_tf)))
+963	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:982:2
+981	  rates = op.get_attr('rates')
+982	  assert rates == [1] * len(rates), 'Only supports when rates are all 1s'
+983	  kh, kw = ksizes[1], ksizes[2]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1038:2
+1037	
+1038	  assert op.inputs[1].name in context.consts, \
+1039	      'Second input to the Fill op must be a constant'
+1040	  assert output_name in context.shape_dict, \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1040:2
+1039	      'Second input to the Fill op must be a constant'
+1040	  assert output_name in context.shape_dict, \
+1041	      'Shape of the output of Fill must be known'
+1042	  shape = context.shape_dict[output_name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1125:4
+1124	  else:
+1125	    assert False, ('Strided Slice case not handled. Input shape = {}, output shape = {}'.format(str(input_shape),str(output_shape)))
+1126	  context.translated[output_name] = True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1192:2
+1191	
+1192	  assert len(op.inputs) == len(op.outputs), (
+1193	      'must have same number of outputs as inputs')
+1194	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1213:2
+1212	
+1213	  assert len(context.shape_dict[op.inputs[0].name]) == 1, (
+1214	        'first input to \'gather\' must be a 1-D tensor. Input shape = {}, output shape = {}'.
+1215	          format(str(input_shape), str(output_shape)))
+1216	  assert op.inputs[1].name in context.consts, (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers.py:1216:2
+1215	          format(str(input_shape), str(output_shape)))
+1216	  assert op.inputs[1].name in context.consts, (
+1217	         'second input to \'gather\' must be a constant')
+1218	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_layers_common.py:58:2
+57	
+58	  assert len(input_names) == 1, (
+59	      'Skip op must have only 1 input:' +
+60	      ' This op of type %s cannot be skipped' % (op.type))
+61	  inp_name = input_names[0]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_ops_to_layers.py:125:4
+124	    inp_name = compat.as_str_any(inp.name)
+125	    assert inp_name in context.translated, (
+126	        'No translation found for {}'.format(inp_name))
+127	  for out in op.outputs:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_ops_to_layers.py:128:4
+127	  for out in op.outputs:
+128	    assert out.name in context.shape_dict, (
+129	        'Shape for {} is not fully defined'.format(out.name))
+130	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:43:6
+42	    else:
+43	      assert c == 1 or h == 1 or w == 1, \
+44	          'Add constant: cannot add a constant in which all the dimensions ' \
+45	          '(Seq, C, H, W) are of non-unit size'
+46	      if c == 1: #swap seq. and C
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:67:4
+66	    shape = list(x.shape)
+67	    assert len(shape) < 5, 'Const blob shape is more than rank 4'
+68	    if len(shape) == 0:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:79:6
+78	    elif len(shape) == 4:
+79	      assert shape[0] == 1, 'Add Constant: Batch dimension must be 1'
+80	      shape = [shape[3], shape[1], shape[2]]  #(B,H,W,C) ---> (C,H,W)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:125:6
+124	    else:
+125	      assert False, 'Concatenation supported only along channel, height or '\
+126	          'width dimensions'
+127	  else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:129:6
+128	    if len(output_shape) == 4:
+129	      assert axis in [1, 2, 3], 'Concat axis case not handled'
+130	    elif len(output_shape) == 3:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:138:6
+137	    else:
+138	      assert False, 'Concat axis case not handled'
+139	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:187:4
+186	  else:
+187	    assert False, 'Concat axis case not handled'
+188	  context.translated[output_name] = True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:212:6
+211	    elif common_out_shape != out_shape:
+212	      assert False, 'Split op case not handled. Only equal splitting convertible to CoreML.'
+213	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:214:2
+213	
+214	  assert len(input_shape) == 4 and\
+215	         len(common_out_shape) == 4 and \
+216	         common_out_shape[:3] == input_shape[:3], \
+217	        ('Split op case not handled. Input shape = {}, output shape = {}'.format(str(input_shape), str(common_out_shape)))
+218	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:279:2
+278	  # if target_shape == (X,1) -----> new_shape = (1,1,X)
+279	  assert len(target_shape) in [1, 2, 3, 4], (
+280	      'Reshape: Currently only supported if target shape is rank 2, 3 or 4')
+281	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_shape_sensitive_layers.py:383:4
+382	    axis.replace('B','S')
+383	    assert axis in ['S', 'C', 'H', 'W', 'CHW', 'HW'], (
+384	        'Axis value %s not supported. '
+385	        'Reduction supported along C, H, W, HW, CHW dimensions only.' % axis)
+386	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_tf_coreml_converter.py:87:4
+86	  elif len(tf_shape) == 4:
+87	    assert tf_shape[0] == 1, "Output 4D tensor's first dimension (Batch) " + \
+88	        "must be 1."
+89	    shape = [tf_shape[3], tf_shape[1], tf_shape[2]] #(C,H,W)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_tf_coreml_converter.py:192:6
+191	      # Handle placeholders -- all placeholders are inputs
+192	      assert not any(filter(output_names.__contains__, output_feature_names)), \
+193	          ('Output feature cannot be a placeholder')
+194	      input_name = compat.as_str_any(op.outputs[0].name)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/tfcoreml/_tf_coreml_converter.py:197:8
+196	      if not (shape.is_fully_defined() or input_name in input_name_shape_dict):
+197	        assert False, (
+198	            "%s is a placeholder with incomplete shape %s" %(input_name, str(shape)))
+199	      if shape.is_fully_defined():
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/utils/_infer_shapes_nn_mlmodel.py:403:12
+402	        for key, value in input_shape_dict.items():
+403	            assert len(value) == 5, 'Shape of the input must be of length 5'
+404	            shape_dict[key] = value
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tf-coreml/utils/_infer_shapes_nn_mlmodel.py:450:12
+449	        for inp in layer.input:
+450	            assert inp in shape_dict, ('Input %s shape not cannot be determined' %(inp))
+451	        layer_type = layer.WhichOneof('layer')
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html
+   Location: /code/tf-coreml/utils/visualize_pb.py:40:4
+39	    visualize(sys.argv[1], sys.argv[2])
+40	    os.system("tensorboard --logdir=" + sys.argv[2])
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 8509
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 83
+		Medium: 5
+		High: 3
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 3
+		Medium: 1
+		High: 87
+Files skipped (3):
+	/code/MemeDrawer.py (syntax error while parsing AST from file)
+	/code/im2txt/train.py (syntax error while parsing AST from file)
+	/code/tf-coreml/examples/linear_mnist_train.py (syntax error while parsing AST from file)

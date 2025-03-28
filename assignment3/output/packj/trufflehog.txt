@@ -1,0 +1,10 @@
+🐷🔑🐷  TruffleHog. Unearth your secrets. 🐷🔑🐷
+
+2025-03-28T23:03:24Z    info-0  trufflehog      running source  {"source_manager_worker_id": "M9zDh", "with_units": true}
+Found unverified result 🐷🔑❓
+Detector Type: Honeycomb
+Decoder Type: PLAIN
+Raw result: isActiveNetworkMetered
+File: /code/packj/audit/static_proxy/astgen-java/data/jellybean_allmappings
+Line: 9
+

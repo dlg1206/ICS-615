@@ -1,0 +1,1790 @@
+Working... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:07
+Run started:2025-03-28 23:00:23.307529
+
+Test results:
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: /code/app.py:81:24
+80	# Start Gradio website
+81	demo.launch(server_name="0.0.0.0", server_port=5011, show_api=False)
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: '<image>'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html
+   Location: /code/llava/constants.py:9:22
+8	IMAGE_TOKEN_INDEX = -200
+9	DEFAULT_IMAGE_TOKEN = "<image>"
+10	DEFAULT_IMAGE_PATCH_TOKEN = "<im_patch>"
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: '<im_patch>'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html
+   Location: /code/llava/constants.py:10:28
+9	DEFAULT_IMAGE_TOKEN = "<image>"
+10	DEFAULT_IMAGE_PATCH_TOKEN = "<im_patch>"
+11	DEFAULT_IM_START_TOKEN = "<im_start>"
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: '<im_start>'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html
+   Location: /code/llava/constants.py:11:25
+10	DEFAULT_IMAGE_PATCH_TOKEN = "<im_patch>"
+11	DEFAULT_IM_START_TOKEN = "<im_start>"
+12	DEFAULT_IM_END_TOKEN = "<im_end>"
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: '<im_end>'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html
+   Location: /code/llava/constants.py:12:23
+11	DEFAULT_IM_START_TOKEN = "<im_start>"
+12	DEFAULT_IM_END_TOKEN = "<im_end>"
+13	IMAGE_PLACEHOLDER = "<image-placeholder>"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/conversation.py:81:20
+80	                if i == 0:
+81	                    assert message, "first message should not be none"
+82	                    assert role == self.roles[0], "first message should come from user"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/conversation.py:82:20
+81	                    assert message, "first message should not be none"
+82	                    assert role == self.roles[0], "first message should come from user"
+83	                if message:
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/llava/demo/com_infer.py:21:0
+20	from PIL import Image
+21	import pickle
+22	import argparse
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/llava/demo/com_infer_phi4.py:21:0
+20	from PIL import Image
+21	import pickle
+22	import argparse
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/llava/demo/gen_infer.py:21:0
+20	from PIL import Image
+21	import pickle
+22	import argparse
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/demo/utils.py:91:20
+90	def load_weights(model, hlora_path, fusion_layer_path=None):
+91	    hlora_weights = torch.load(hlora_path)
+92	    hlora_unexpected_keys = model.load_state_dict(hlora_weights, strict=False)[1]
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/demo/utils.py:97:31
+96	    if fusion_layer_path:
+97	        fusion_layer_weights = torch.load(fusion_layer_path)
+98	        fusion_layer_unexpected_keys = model.load_state_dict(fusion_layer_weights, strict=False)[1]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_gpt_review_bench.py:95:12
+94	        else:
+95	            assert False, f"Visual QA category not found in rule file: {category}."
+96	        prompt = rule['prompt']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_gpt_review_visual.py:92:12
+91	        else:
+92	            assert False, f"Visual QA category not found in rule file: {category}."
+93	        prompt = rule['prompt']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_pope.py:75:8
+74	    for file in os.listdir(args.annotation_dir):
+75	        assert file.startswith('coco_pope_')
+76	        assert file.endswith('.json')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_pope.py:76:8
+75	        assert file.startswith('coco_pope_')
+76	        assert file.endswith('.json')
+77	        category = file[10:-5]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/llava/eval/eval_science_qa.py:36:15
+35	        return -1
+36	        return random.choice(range(len(choices)))
+37	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/llava/eval/eval_science_qa_gpt4.py:35:15
+34	    else:
+35	        return random.choice(range(len(choices)))
+36	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/llava/eval/eval_science_qa_gpt4_requery.py:37:15
+36	    else:
+37	        return random.choice(range(len(choices)))
+38	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_science_qa_gpt4_requery.py:66:12
+65	        if prob_id not in our_predictions:
+66	            assert False
+67	        if prob_id not in gpt4_predictions:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_science_qa_gpt4_requery.py:68:12
+67	        if prob_id not in gpt4_predictions:
+68	            assert False
+69	        our_pred = our_predictions[prob_id]['text']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/eval_textvqa.py:30:8
+29	    else:
+30	        assert False
+31	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/m4c_evaluator.py:230:8
+229	        answers = [self.answer_processor(a) for a in raw_answers]
+230	        assert len(answers) == 10
+231	        gt_answers = list(enumerate(answers))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/eval/model_vqa_loader.py:73:4
+72	def create_data_loader(questions, image_folder, tokenizer, image_processor, model_config, batch_size=1, num_workers=4):
+73	    assert batch_size == 1, "batch_size must be 1"
+74	    dataset = CustomDataset(questions, image_folder, tokenizer, image_processor, model_config)
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/eval/run_llava.py:35:19
+34	    if image_file.startswith("http") or image_file.startswith("https"):
+35	        response = requests.get(image_file)
+36	        image = Image.open(BytesIO(response.content)).convert("RGB")
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/llava/model/__init__.py:6:0
+5	    from .language_model.llava_phi3 import LlavaPhiForCausalLM, LlavaPhiConfig
+6	except:
+7	    pass
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/apply_delta.py:25:12
+24	        if name not in base.state_dict():
+25	            assert name in ['model.mm_projector.weight', 'model.mm_projector.bias'], f'{name} not in base model'
+26	            continue
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/apply_delta.py:30:12
+29	        else:
+30	            assert name in ['model.embed_tokens.weight', 'lm_head.weight'], \
+31	                f'{name} dimension mismatch: {param.data.shape} vs {base.state_dict()[name].shape}'
+32	            bparam = base.state_dict()[name]
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/model/builder.py:67:38
+66	            if os.path.exists(os.path.join(model_path, 'non_lora_trainables.bin')):
+67	                non_lora_trainables = torch.load(os.path.join(model_path, 'non_lora_trainables.bin'), map_location='cpu')
+68	            else:
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/model/builder.py:76:27
+75	                        subfolder=subfolder)
+76	                    return torch.load(cache_file, map_location='cpu')
+77	                non_lora_trainables = load_from_hf(model_path, 'non_lora_trainables.bin')
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/model/builder.py:103:35
+102	
+103	            mm_projector_weights = torch.load(os.path.join(model_path, 'mm_projector.bin'), map_location='cpu')
+104	            mm_projector_weights = {k: v.to(torch.float16) for k, v in mm_projector_weights.items()}
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/model/llava_arch.py:93:35
+92	        if pretrain_mm_mlp_adapter is not None:
+93	            mm_projector_weights = torch.load(pretrain_mm_mlp_adapter, map_location='cpu')
+94	            def get_w(weights, keyword):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/llava_arch.py:171:24
+170	                        height = width = self.get_vision_tower().num_patches_per_side
+171	                        assert height * width == base_image_feature.shape[0]
+172	                        if image_aspect_ratio == 'anyres':
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/model/llava_arch.py:354:39
+353	            if model_args.pretrain_mm_mlp_adapter:
+354	                mm_projector_weights = torch.load(model_args.pretrain_mm_mlp_adapter, map_location='cpu')
+355	                embed_tokens_weight = mm_projector_weights['model.embed_tokens.weight']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/llava_arch.py:356:16
+355	                embed_tokens_weight = mm_projector_weights['model.embed_tokens.weight']
+356	                assert num_new_tokens == 2
+357	                if input_embeddings.shape == embed_tokens_weight.shape:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/make_delta.py:25:12
+24	        if name not in base.state_dict():
+25	            assert name in ['model.mm_projector.weight', 'model.mm_projector.bias'], f'{name} not in base model'
+26	            continue
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/make_delta.py:30:12
+29	        else:
+30	            assert name in ['model.embed_tokens.weight', 'lm_head.weight'], f'{name} dimension mismatch: {param.data.shape} vs {base.state_dict()[name].shape}'
+31	            bparam = base.state_dict()[name]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/utils.py:7:8
+6	    if 'llava' in config and 'llava' not in cfg.model_type:
+7	        assert cfg.model_type == 'llama'
+8	        print("You are using newer LLaVA code base, while the checkpoint of v0 is from older code base.")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/model/utils.py:13:12
+12	            print("Upgrading checkpoint...")
+13	            assert len(cfg.architectures) == 1
+14	            setattr(cfg.__class__, "model_type", "llava")
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/llava/peft/peft_model.py:158:27
+157	
+158	        adapters_weights = torch.load(
+159	            filename, map_location=torch.device("cuda" if torch.cuda.is_available() else "cpu")
+160	        )
+161	        # load the weights into the model
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/cli.py:20:19
+19	    if image_file.startswith('http://') or image_file.startswith('https://'):
+20	        response = requests.get(image_file)
+21	        image = Image.open(BytesIO(response.content)).convert('RGB')
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/gradio_web_server.py:39:10
+38	def get_model_list():
+39	    ret = requests.post(args.controller_url + "/refresh_all_workers")
+40	    assert ret.status_code == 200
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/serve/gradio_web_server.py:40:4
+39	    ret = requests.post(args.controller_url + "/refresh_all_workers")
+40	    assert ret.status_code == 200
+41	    ret = requests.post(args.controller_url + "/list_models")
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/gradio_web_server.py:41:10
+40	    assert ret.status_code == 200
+41	    ret = requests.post(args.controller_url + "/list_models")
+42	    models = ret.json()["models"]
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/gradio_web_server.py:207:10
+206	    controller_url = args.controller_url
+207	    ret = requests.post(controller_url + "/get_worker_address",
+208	            json={"model": model_name})
+209	    worker_addr = ret.json()["address"]
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/llava/serve/gradio_web_server.py:222:22
+221	    all_images = state.get_images(return_pil=True)
+222	    all_image_hash = [hashlib.md5(image.tobytes()).hexdigest() for image in all_images]
+223	    for image, hash in zip(all_images, all_image_hash):
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: /code/llava/serve/gradio_web_server.py:457:52
+456	    parser = argparse.ArgumentParser()
+457	    parser.add_argument("--host", type=str, default="0.0.0.0")
+458	    parser.add_argument("--port", type=int)
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/model_worker.py:84:12
+83	        }
+84	        r = requests.post(url, json=data)
+85	        assert r.status_code == 200
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/serve/model_worker.py:85:8
+84	        r = requests.post(url, json=data)
+85	        assert r.status_code == 200
+86	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/register_worker.py:25:8
+24	    }
+25	    r = requests.post(url, json=data)
+26	    assert r.status_code == 200
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/serve/register_worker.py:26:4
+25	    r = requests.post(url, json=data)
+26	    assert r.status_code == 200
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/sglang_worker.py:94:12
+93	        }
+94	        r = requests.post(url, json=data)
+95	        assert r.status_code == 200
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/llava/serve/sglang_worker.py:95:8
+94	        r = requests.post(url, json=data)
+95	        assert r.status_code == 200
+96	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/test_message.py:14:14
+13	        controller_addr = args.controller_address
+14	        ret = requests.post(controller_addr + "/refresh_all_workers")
+15	        ret = requests.post(controller_addr + "/list_models")
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/test_message.py:15:14
+14	        ret = requests.post(controller_addr + "/refresh_all_workers")
+15	        ret = requests.post(controller_addr + "/list_models")
+16	        models = ret.json()["models"]
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/test_message.py:20:14
+19	
+20	        ret = requests.post(controller_addr + "/get_worker_address",
+21	            json={"model": args.model_name})
+22	        worker_addr = ret.json()["address"]
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/llava/serve/test_message.py:40:15
+39	    }
+40	    response = requests.post(worker_addr + "/worker_generate_stream", headers=headers,
+41	            json=pload, stream=True)
+42	
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/model.py:19:0
+18	from PIL import Image
+19	import pickle
+20	import argparse
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/scripts/convert_vizwiz_for_submission.py:40:8
+39	    for x in test_split:
+40	        assert x['question_id'] in results
+41	        all_answers.append({
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/scripts/extract_mm_projector.py:36:17
+35	        v = 'pytorch_model.bin'
+36	        for k in torch.load(os.path.join(args.model_path, v), map_location='cpu').keys():
+37	            if any(key_match in k for key_match in keys_to_match):
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/scripts/extract_mm_projector.py:43:15
+42	    for ckpt_name, weight_keys in ckpt_to_key.items():
+43	        ckpt = torch.load(os.path.join(args.model_path, ckpt_name), map_location='cpu')
+44	        for k in weight_keys:
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/taming_transformers/idx2img.py:19:0
+18	import torchvision.transforms.functional as TF
+19	import pickle
+20	import os, sys
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/idx2img.py:66:13
+65	    if ckpt_path is not None:
+66	        sd = torch.load(ckpt_path, map_location="cpu")["state_dict"]
+67	        missing, unexpected = model.load_state_dict(sd, strict=False)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/main.py:388:12
+387	        else:
+388	            assert os.path.isdir(opt.resume), opt.resume
+389	            logdir = opt.resume.rstrip("/")
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:10:12
+9	    import torch
+10	    midas = torch.hub.load("intel-isl/MiDaS", "MiDaS")
+11	    if gpu:
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:15:23
+14	
+15	    midas_transforms = torch.hub.load("intel-isl/MiDaS", "transforms")
+16	    transform = midas_transforms.default_transform
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:24:4
+23	def depth_to_rgba(x):
+24	    assert x.dtype == np.float32
+25	    assert len(x.shape) == 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:25:4
+24	    assert x.dtype == np.float32
+25	    assert len(x.shape) == 2
+26	    y = x.copy()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:33:4
+32	def rgba_to_depth(x):
+33	    assert x.dtype == np.uint8
+34	    assert len(x.shape) == 3 and x.shape[2] == 4
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_depth.py:34:4
+33	    assert x.dtype == np.uint8
+34	    assert len(x.shape) == 3 and x.shape[2] == 4
+35	    y = x.copy()
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/extract_segmentation.py:31:16
+30	        self.n_labels = 182
+31	        model = torch.hub.load("kazuto1011/deeplab-pytorch", "deeplabv2_resnet101", n_classes=self.n_labels)
+32	        ckpt_path = CKPT_PATH
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/extract_segmentation.py:33:30
+32	        ckpt_path = CKPT_PATH
+33	        model.load_state_dict(torch.load(ckpt_path))
+34	        self.model = model
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_segmentation.py:86:4
+85	    os.makedirs(os.path.dirname(path), exist_ok=True)
+86	    assert len(segmentation.shape)==4
+87	    assert segmentation.shape[0]==1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/extract_segmentation.py:87:4
+86	    assert len(segmentation.shape)==4
+87	    assert segmentation.shape[0]==1
+88	    for seg in segmentation:
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/extract_submodel.py:13:9
+12	
+13	    sd = torch.load(inpath, map_location="cpu")
+14	    new_sd = {"state_dict": dict((k.split(".", 1)[-1],v)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/make_samples.py:14:4
+13	    c,h,w = x.shape
+14	    assert c==3
+15	    x = ((x.detach().cpu().numpy().transpose(1,2,0)+1.0)*127.5).clip(0,255).astype(np.uint8)
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/taming_transformers/scripts/make_samples.py:194:4
+193	            print("Deleting the cond-stage restore-ckpt path from the config...")
+194	    except:
+195	        pass
+196	
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/make_samples.py:223:16
+222	    if ckpt:
+223	        pl_sd = torch.load(ckpt, map_location="cpu")
+224	        global_step = pl_sd["global_step"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/make_samples.py:255:12
+254	        else:
+255	            assert os.path.isdir(opt.resume), opt.resume
+256	            logdir = opt.resume.rstrip("/")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/make_scene_samples.py:29:4
+28	def _helper(coord: int, coord_max: int, coord_window: int) -> (int, int):
+29	    assert 0 <= coord < coord_max
+30	    coord_desired_center = (coord_window - 1) // 2
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/make_scene_samples.py:151:12
+150	        else:
+151	            assert os.path.isdir(opt.resume), opt.resume
+152	            logdir = opt.resume.rstrip("/")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_conditional.py:41:4
+40	def single_image_to_torch(x, permute=True):
+41	    assert x is not None, "Please provide an image through the upload function"
+42	    x = np.array(x)
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/taming_transformers/scripts/sample_conditional.py:257:4
+256	            st.warning("Deleting the cond-stage restore-ckpt path from the config...")
+257	    except:
+258	        pass
+259	
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/sample_conditional.py:287:16
+286	    if ckpt:
+287	        pl_sd = torch.load(ckpt, map_location="cpu")
+288	        global_step = pl_sd["global_step"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_conditional.py:319:12
+318	        else:
+319	            assert os.path.isdir(opt.resume), opt.resume
+320	            logdir = opt.resume.rstrip("/")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:25:4
+24	    log = dict()
+25	    assert type(class_label) == int, f'expecting type int but type is {type(class_label)}'
+26	    qzshape = [batch_size, dim_z, h, w]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:27:4
+26	    qzshape = [batch_size, dim_z, h, w]
+27	    assert not model.be_unconditional, 'Expecting a class-conditional Net2NetTransformer.'
+28	    c_indices = repeat(torch.tensor([class_label]), '1 -> b 1', b=batch_size).to(model.device)  # class token
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:47:4
+46	    qzshape = [batch_size, dim_z, h, w]
+47	    assert model.be_unconditional, 'Expecting an unconditional model.'
+48	    c_indices = repeat(torch.tensor([model.sos_token]), '1 -> b 1', b=batch_size).to(model.device)  # sos token
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:66:8
+65	    if not unconditional:
+66	        assert given_classes is not None
+67	        print("Running in pure class-conditional sampling mode. I will produce "
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:197:16
+196	    if ckpt:
+197	        pl_sd = torch.load(ckpt, map_location="cpu")
+198	        global_step = pl_sd["global_step"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:212:4
+211	    opt, unknown = parser.parse_known_args()
+212	    assert opt.resume
+213	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:227:8
+226	    else:
+227	        assert os.path.isdir(opt.resume), opt.resume
+228	        logdir = opt.resume.rstrip("/")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/scripts/sample_fast.py:248:8
+247	        cls_str = opt.classes
+248	        assert not cls_str.endswith(","), 'class string should not end with a ","'
+249	        given_classes = [int(c) for c in cls_str.split(",")]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/coco.py:47:8
+46	
+47	        assert data_json.split("/")[-1] in ["captions_train2017.json",
+48	                                            "captions_val2017.json"]
+49	        if self.stuffthing:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/coco.py:107:12
+106	        if self.onehot:
+107	            assert self.stuffthing
+108	            # stored in caffe format: unlabeled==255. stuff and thing from
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/coco.py:114:12
+113	            # latter too
+114	            assert segmentation.dtype == np.uint8
+115	            segmentation = segmentation + 1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/coco.py:122:12
+121	        if self.onehot:
+122	            assert segmentation.dtype == np.uint8
+123	            # make it one hot
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/conditional_builder/objects_bbox.py:36:8
+35	        object_triples = grouper(conditional_list, 3)
+36	        assert conditional.shape[0] == self.embedding_dim
+37	        return [
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/conditional_builder/objects_center_points.py:80:8
+79	        table_of_content = grouper(conditional_list, self.object_descriptor_length)
+80	        assert conditional.shape[0] == self.embedding_dim
+81	        return [
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/conditional_builder/objects_center_points.py:166:8
+165	        flattened = [token for tuple_ in object_tuples for token in tuple_] + extra
+166	        assert len(flattened) == self.embedding_dim
+167	        assert all(0 <= value < self.no_tokens for value in flattened)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/conditional_builder/objects_center_points.py:167:8
+166	        assert len(flattened) == self.embedding_dim
+167	        assert all(0 <= value < self.no_tokens for value in flattened)
+168	        return LongTensor(flattened)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/taming_transformers/taming/data/image_transforms.py:78:19
+77	        else:
+78	            size = random.randint(self.min_size, max_size)
+79	        top = random.randint(0, height - size)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/taming_transformers/taming/data/image_transforms.py:79:14
+78	            size = random.randint(self.min_size, max_size)
+79	        top = random.randint(0, height - size)
+80	        left = random.randint(0, width - size)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/taming_transformers/taming/data/image_transforms.py:80:15
+79	        top = random.randint(0, height - size)
+80	        left = random.randint(0, width - size)
+81	        bbox = left / width, top / height, size / width, size / height
+
+--------------------------------------------------
+>> Issue: [B506:yaml_load] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b506_yaml_load.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:18:15
+17	    with open(path_to_yaml) as f:
+18	        di2s = yaml.load(f)
+19	    for idx in indices:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:27:4
+26	    """Expects a string in the format '32-123, 256, 280-321'"""
+27	    assert not string.endswith(","), "provided string '{}' ends with a comma, pls remove it".format(string)
+28	    subs = string.split(",")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:32:8
+31	        subsubs = sub.split("-")
+32	        assert len(subsubs) > 0
+33	        if len(subsubs) == 1:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:152:20
+151	                    atpath = at.get(self.AT_HASH, datastore=self.root)
+152	                    assert atpath == path
+153	
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:157:20
+156	                with tarfile.open(path, "r:") as tar:
+157	                    tar.extractall(path=datadir)
+158	
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:165:24
+164	                    with tarfile.open(subpath, "r:") as tar:
+165	                        tar.extractall(path=subdir)
+166	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:210:20
+209	                    atpath = at.get(self.AT_HASH, datastore=self.root)
+210	                    assert atpath == path
+211	
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:215:20
+214	                with tarfile.open(path, "r:") as tar:
+215	                    tar.extractall(path=datadir)
+216	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:274:4
+273	def rgba_to_depth(x):
+274	    assert x.dtype == np.uint8
+275	    assert len(x.shape) == 3 and x.shape[2] == 4
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:275:4
+274	    assert x.dtype == np.uint8
+275	    assert len(x.shape) == 3 and x.shape[2] == 4
+276	    y = x.copy()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:421:4
+420	    dtype = x.dtype
+421	    assert dtype in [np.float32, np.float64]
+422	    assert x.min() >= -1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:422:4
+421	    assert dtype in [np.float32, np.float64]
+422	    assert x.min() >= -1
+423	    assert x.max() <= 1
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:423:4
+422	    assert x.min() >= -1
+423	    assert x.max() <= 1
+424	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/imagenet.py:435:4
+434	    nw = w//factor
+435	    assert nh > 0 and nw > 0, (nh, nw)
+436	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/data/sflckr.py:64:8
+63	        segmentation = Image.open(example["segmentation_path_"])
+64	        assert segmentation.mode == "L", segmentation.mode
+65	        segmentation = np.array(segmentation).astype(np.uint8)
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/utils.py:22:12
+21	        with tarfile.open(path, "r:gz") as tar:
+22	            tar.extractall(path=os.path.split(path)[0])
+23	    elif path.endswith("tar"):
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/utils.py:25:12
+24	        with tarfile.open(path, "r:") as tar:
+25	            tar.extractall(path=os.path.split(path)[0])
+26	    elif path.endswith("zip"):
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/taming_transformers/taming/data/utils.py:28:12
+27	        with zipfile.ZipFile(path, "r") as f:
+28	            f.extractall(path=os.path.split(path)[0])
+29	    else:
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: /code/taming_transformers/taming/data/utils.py:87:8
+86	    ) as bar:
+87	        urllib.request.urlretrieve(url, targetpath, reporthook=reporthook(bar))
+88	    return targetpath
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:49:13
+48	    def init_from_ckpt(self, path, ignore_keys=list()):
+49	        sd = torch.load(path, map_location="cpu")["state_dict"]
+50	        for k in sd.keys():
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:117:8
+116	        block_size = self.transformer.get_block_size()
+117	        assert not self.transformer.training
+118	        if self.pkeep <= 0.0:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:120:12
+119	            # one pass suffices since input is pure noise anyway
+120	            assert len(x.shape)==2
+121	            noise_shape = (x.shape[0], steps-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:147:16
+146	                callback(k)
+147	                assert x.size(1) <= block_size # make sure model can see conditioning
+148	                x_cond = x if x.size(1) <= block_size else x[:, -block_size:]  # crop context if needed
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:342:8
+341	        union_params = decay | no_decay
+342	        assert len(inter_params) == 0, "parameters %s made it into both decay/no_decay sets!" % (str(inter_params), )
+343	        assert len(param_dict.keys() - union_params) == 0, "parameters %s were not separated into either decay/no_decay set!" \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/cond_transformer.py:343:8
+342	        assert len(inter_params) == 0, "parameters %s made it into both decay/no_decay sets!" % (str(inter_params), )
+343	        assert len(param_dict.keys() - union_params) == 0, "parameters %s were not separated into either decay/no_decay set!" \
+344	                                                    % (str(param_dict.keys() - union_params), )
+345	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/vqgan.py:41:12
+40	        if colorize_nlabels is not None:
+41	            assert type(colorize_nlabels)==int
+42	            self.register_buffer("colorize", torch.randn(3, colorize_nlabels, 1, 1))
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/taming/models/vqgan.py:47:13
+46	    def init_from_ckpt(self, path, ignore_keys=list()):
+47	        sd = torch.load(path, map_location="cpu")["state_dict"]
+48	        keys = list(sd.keys())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/vqgan.py:145:12
+144	            # colorize with random projection
+145	            assert xrec.shape[1] > 3
+146	            x = self.to_rgb(x)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/vqgan.py:153:8
+152	    def to_rgb(self, x):
+153	        assert self.image_key == "segmentation"
+154	        if not hasattr(self, "colorize"):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/models/vqgan.py:201:12
+200	            # colorize with random projection
+201	            assert xrec.shape[1] > 3
+202	            # convert logits to indices
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/diffusionmodules/model.py:16:4
+15	    """
+16	    assert len(timesteps.shape) == 1
+17	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/diffusionmodules/model.py:300:12
+299	            # timestep embedding
+300	            assert t is not None
+301	            temb = get_timestep_embedding(t, self.ch)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/diffusionmodules/model.py:650:12
+649	            # timestep embedding
+650	            assert t is not None
+651	            temb = get_timestep_embedding(t, self.ch)
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/taming/modules/losses/lpips.py:29:29
+28	        ckpt = get_ckpt_path(name, "taming/modules/autoencoder/lpips")
+29	        self.load_state_dict(torch.load(ckpt, map_location=torch.device("cpu")), strict=False)
+30	        print("loaded pretrained LPIPS loss from {}".format(ckpt))
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/taming_transformers/taming/modules/losses/lpips.py:38:30
+37	        ckpt = get_ckpt_path(name)
+38	        model.load_state_dict(torch.load(ckpt, map_location=torch.device("cpu")), strict=False)
+39	        return model
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/losses/vqperceptual.py:40:8
+39	        super().__init__()
+40	        assert disc_loss in ["hinge", "vanilla"]
+41	        self.codebook_weight = codebook_weight
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/losses/vqperceptual.py:93:16
+92	            if cond is None:
+93	                assert not self.disc_conditional
+94	                logits_fake = self.discriminator(reconstructions.contiguous())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/losses/vqperceptual.py:96:16
+95	            else:
+96	                assert self.disc_conditional
+97	                logits_fake = self.discriminator(torch.cat((reconstructions.contiguous(), cond), dim=1))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/losses/vqperceptual.py:103:16
+102	            except RuntimeError:
+103	                assert not self.training
+104	                d_weight = torch.tensor(0.0)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/misc/coord.py:13:8
+12	        """fake vqmodel interface"""
+13	        assert 0.0 <= c.min() and c.max() <= 1.0
+14	        b,ch,h,w = c.shape
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/misc/coord.py:15:8
+14	        b,ch,h,w = c.shape
+15	        assert ch == 1
+16	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:51:8
+50	        super().__init__()
+51	        assert config.n_embd % config.n_head == 0
+52	        # key, query, value projections for all heads
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:114:27
+113	        # TODO: check that training still works
+114	        if return_present: assert not self.training
+115	        # layer past: tuple of length two with B, nh, T, hs
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:168:8
+167	        t = token_embeddings.shape[1]
+168	        assert t <= self.block_size, "Cannot forward, model block size is exhausted."
+169	        position_embeddings = self.pos_emb[:, :t, :] # each position maps to a (learnable) vector
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:184:8
+183	        # inference only
+184	        assert not self.training
+185	        token_embeddings = self.tok_emb(idx)    # each index maps to a (learnable) vector
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:190:12
+189	        if past is not None:
+190	            assert past_length is not None
+191	            past = torch.cat(past, dim=-2)   # n_layer, 2, b, nh, len_past, dim_head
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:194:12
+193	            expected_shape = [self.config.n_layer, 2, idx.shape[0], self.config.n_head, past_length, self.config.n_embd//self.config.n_head]
+194	            assert past_shape == expected_shape, f"{past_shape} =/= {expected_shape}"
+195	            position_embeddings = self.pos_emb[:, past_length, :]  # each position maps to a (learnable) vector
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:268:8
+267	        t = token_embeddings.shape[1]
+268	        assert t <= self.block_size, "Cannot forward, model block size is exhausted."
+269	        position_embeddings = self.pos_emb[:, :t, :] # each position maps to a (learnable) vector
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:372:8
+371	        N, D = x.shape
+372	        assert D == self.nc, D
+373	        c = x[torch.randperm(N)[:self.ncluster]] # init clusters at random
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/mingpt.py:393:12
+392	            bs,c,h,w = x.shape
+393	            assert c == self.nc
+394	            x = x.reshape(bs,c,h*w,1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:33:8
+32	            C = C*4
+33	        assert H == W == 1
+34	        idx = torch.tensor(indices.ravel())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:84:8
+83	        super().__init__()
+84	        assert H == W
+85	        size = W
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:129:8
+128	
+129	        assert len(idx) == size*size
+130	        idx = torch.tensor(idx)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:144:8
+143	        super().__init__()
+144	        assert H == W
+145	        size = W
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:189:8
+188	
+189	        assert len(idx) == size*size
+190	        idx = idx[::-1]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:224:8
+223	        idx = indices.flatten()
+224	        assert len(idx) == H*W
+225	        idx = torch.tensor(idx)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/transformer/permuter.py:244:4
+243	    xre = p0(y, reverse=True)
+244	    assert torch.equal(x, xre)
+245	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/util.py:13:8
+12	                 allow_reverse_init=False):
+13	        assert affine
+14	        super().__init__()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:149:8
+148	        ishape = inds.shape
+149	        assert len(ishape)>1
+150	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:163:8
+162	        ishape = inds.shape
+163	        assert len(ishape)>1
+164	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:204:8
+203	        b, h, w, c = shape
+204	        assert b*h*w == indices.shape[0]
+205	        indices = rearrange(indices, '(b h w) -> b h w', b=b, h=h, w=w)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:249:8
+248	        ishape = inds.shape
+249	        assert len(ishape)>1
+250	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:263:8
+262	        ishape = inds.shape
+263	        assert len(ishape)>1
+264	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:272:8
+271	    def forward(self, z, temp=None, rescale_logits=False, return_logits=False):
+272	        assert temp is None or temp==1.0, "Only for interface compatible with Gumbel"
+273	        assert rescale_logits==False, "Only for interface compatible with Gumbel"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:273:8
+272	        assert temp is None or temp==1.0, "Only for interface compatible with Gumbel"
+273	        assert rescale_logits==False, "Only for interface compatible with Gumbel"
+274	        assert return_logits==False, "Only for interface compatible with Gumbel"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:274:8
+273	        assert rescale_logits==False, "Only for interface compatible with Gumbel"
+274	        assert return_logits==False, "Only for interface compatible with Gumbel"
+275	        # reshape z -> (batch, height, width, channel) and flatten
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:385:8
+384	        ishape = inds.shape
+385	        assert len(ishape)>1
+386	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/modules/vqvae/quantize.py:399:8
+398	        ishape = inds.shape
+399	        assert len(ishape)>1
+400	        inds = inds.reshape(ishape[0],-1)
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/taming_transformers/taming/util.py:20:9
+19	    os.makedirs(os.path.split(local_path)[0], exist_ok=True)
+20	    with requests.get(url, stream=True) as r:
+21	        total_size = int(r.headers.get("content-length", 0))
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/taming_transformers/taming/util.py:33:11
+32	        content = f.read()
+33	    return hashlib.md5(content).hexdigest()
+34	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/util.py:37:4
+36	def get_ckpt_path(name, root, check=False):
+37	    assert name in URL_MAP
+38	    path = os.path.join(root, CKPT_MAP[name])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/taming_transformers/taming/util.py:43:8
+42	        md5 = md5_hash(path)
+43	        assert md5 == MD5_MAP[name], md5
+44	    return path
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 14468
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 128
+		Medium: 40
+		High: 8
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 13
+		Medium: 6
+		High: 157
+Files skipped (0):
