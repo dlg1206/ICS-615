@@ -20,5 +20,6 @@ COPY --from=trufflehog_build /go/bin/trufflehog /usr/local/bin/
 # install bandit
 USER hobbes
 RUN pip install --user --no-cache-dir bandit
+COPY --chmod=755 scan.sh /home/hobbes
 
-ENTRYPOINT ["ash"]
+ENTRYPOINT ["./scan.sh"]

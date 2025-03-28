@@ -16,8 +16,7 @@ docker build -t btsand .
 2. Launch the Sandbox container
 
 ```bash
-docker run --rm -it -v "<absolute path to project>:/code" btsand
+docker run --rm -it -v "<absolute path to project>:/code" -v "$(pwd)/out:/out" btsand
 ```
 
-This will open a shell into a box with bandit and trufflehog installed. The code will be mounted at `/code` inside the
-box
+This will run both bandit and trufflehog of the mounted directory and save the output the out directory
