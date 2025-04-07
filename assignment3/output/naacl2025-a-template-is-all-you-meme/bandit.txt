@@ -1,0 +1,221 @@
+Run started:2025-03-28 23:02:48.660873
+
+Test results:
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/finetune_clip.py:7:0
+6	import PIL
+7	import pickle
+8	import torch
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: /code/finetune_clip.py:188:32
+187	    winning_clf = CLIPClf(model, len(label_names))
+188	    winning_clf.load_state_dict(torch.load(f'{winner}model.pt'))
+189	    winning_clf.to(device)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/memetils.py:466:4
+465	    encoders = ['ViT-L/14@336px', 'ViT-B/32', 'ViT-B/16']
+466	    assert args.feature in encoders
+467	    if args.feature == encoders[0]:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/memetils.py:496:4
+495	    encoders = ['ViT-L/14@336px', 'ViT-B/32', 'ViT-B/16']
+496	    assert args.feature in encoders
+497	    if args.feature == encoders[0]:
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraping/parseandwrite.py:123:23
+122	        try:
+123	            response = requests.get(snapshot_url)
+124	            response.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraping/parseandwrite.py:128:23
+127	            time.sleep(600)
+128	            response = requests.get(snapshot_url)
+129	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/scraping/write_html.py:89:27
+88	            try:
+89	                response = requests.get(snapshot_url)
+90	                response.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/tlc.py:5:0
+4	import glob
+5	import pickle
+6	import PIL
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tlc.py:56:32
+55	                with open('embeddings/info_dicts.pickle', 'rb') as handle:
+56	                    self.info = pickle.load(handle)
+57	                self.template_embeddings = np.load('{}about_embeddings.npy'.format(feature_dir))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tlc.py:65:36
+64	                    with open('{}info_dicts.pickle'.format(feature_dir), 'rb') as handle:
+65	                        self.info = pickle.load(handle)
+66	                    self.template_embeddings = np.load('{}template_embeddings.npy'.format(feature_dir))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tlc.py:69:36
+68	                    with open('{}ex_info_dicts.pickle'.format(feature_dir), 'rb') as handle:
+69	                        self.info = pickle.load(handle)
+70	                    with open('{}idx_lst.pickle'.format(feature_dir), 'rb') as handle:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tlc.py:71:39
+70	                    with open('{}idx_lst.pickle'.format(feature_dir), 'rb') as handle:
+71	                        self.idx_lst = pickle.load(handle)
+72	                    self.template_embeddings = np.load('{}ex_template_embeddings.npy'.format(feature_dir))
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tlc.py:81:32
+80	                with open('embeddings/info_dicts.pickle', 'rb') as handle:
+81	                    self.info = pickle.load(handle)
+82	                
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tlc.py:302:8
+301	                        about[idx] = template_about
+302	        assert None not in about
+303	        return self.clip_text(about)
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/tsplit.py:5:0
+4	import os
+5	import pickle
+6	import PIL
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tsplit.py:36:28
+35	            with open('{}ex_info_dicts.pickle'.format(feature_dir), 'rb') as handle:
+36	                self.info = pickle.load(handle)
+37	            with open('{}idx_lst.pickle'.format(feature_dir), 'rb') as handle:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: /code/tsplit.py:38:31
+37	            with open('{}idx_lst.pickle'.format(feature_dir), 'rb') as handle:
+38	                self.idx_lst = pickle.load(handle)
+39	            self.template_embeddings = np.load('{}ex_template_embeddings.npy'.format(feature_dir))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tsplit.py:326:12
+325	            encoders = ['ViT-L/14@336px', 'ViT-B/32', 'ViT-B/16']
+326	            assert self.args.feature in encoders
+327	            if self.args.feature == encoders[0]:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tsplit.py:346:12
+345	            train_ratio = train_samp_size/self.train_size
+346	            assert 0 < train_ratio < 1
+347	            if self.val_size > 0:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/tsplit.py:349:16
+348	                val_ratio = val_samp_size/self.val_size
+349	                assert 0 < val_ratio < 1
+350	                samp_val_size = val_ratio * self.val_size
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 2149
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 9
+		Medium: 11
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 3
+		Medium: 0
+		High: 17
+Files skipped (0):

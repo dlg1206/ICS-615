@@ -1,0 +1,2061 @@
+Working... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:03
+Run started:2025-03-28 23:03:21.680489
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:119:3
+118				release_history = pm_proxy.get_release_history(pkg_name, pkg_info=pkg_info)
+119				assert release_history, 'no data!'
+120	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:144:3
+143				release_history = pm_proxy.get_release_history(pkg_name, pkg_info=pkg_info)
+144				assert release_history, 'no data!'
+145	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:183:2
+182	
+183			assert ver_info, 'No version info!'
+184			requested_ver_str = ver_info['tag']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:188:2
+187			latest_ver_info = pm_proxy.get_version(pkg_name, ver_str=None, pkg_info=None)
+188			assert latest_ver_info, 'No latest version info!'
+189	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:314:2
+313			ret = pm_proxy.get_downloads(pkg_name, pkg_info)
+314			assert ret != None, " N/A"
+315			if ret < 1000:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:699:2
+698			authors = pm_proxy.get_author(pkg_name, ver_str=ver_str, pkg_info=pkg_info, ver_info=ver_info)
+699			assert authors, 'no data!'
+700			assert isinstance(authors, list), "invalid format!"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:700:2
+699			assert authors, 'no data!'
+700			assert isinstance(authors, list), "invalid format!"
+701	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:920:3
+919	
+920				assert os.path.exists(filepath+'.out'), 'parse error!'
+921				perms = parse_api_usage(pm_name, filepath+'.out')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:992:2
+991			summary = parse_trace_file(trace_filepath, report_dir)
+992			assert summary, "parse error!"
+993	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1041:2
+1040			pkg_name, pkg_info = pm_proxy.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+1041			assert pkg_info, 'package not found!'
+1042	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1044:2
+1043			ver_info = pm_proxy.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+1044			assert ver_info, 'No version info!'
+1045	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b108_hardcoded_tmp_directory.html
+   Location: /code/packj/audit/main.py:1148:25
+1147		if in_docker() or in_podman():
+1148			container_mountpoint = '/tmp/packj'
+1149			host_volume = is_mounted(container_mountpoint)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1158:3
+1157			try:
+1158				assert ':' in item, f'invalid dep file: {item}. Expected <pm>:<file> (e.g., npm:package.json)'
+1159	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1161:3
+1160				pm_name, deps_filepath = item.split(':')
+1161				assert os.path.exists(deps_filepath), f'file does not exist'
+1162	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1166:3
+1165				dep_list = pm_proxy.parse_deps_file(deps_filepath)
+1166				assert dep_list, "parse error"
+1167	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/main.py:1177:3
+1176				components = item.split(':')
+1177				assert len(components) >= 2 and len(components) <= 3, f'Invalid request: {item}. Expected <pm>:<pkg>[:<ver>] (e.g., npm:react)'
+1178	
+
+--------------------------------------------------
+>> Issue: [B103:set_bad_file_permissions] Chmod setting a permissive mask 0o755 on file (report_dir).
+   Severity: Medium   Confidence: High
+   CWE: CWE-732 (https://cwe.mitre.org/data/definitions/732.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b103_set_bad_file_permissions.html
+   Location: /code/packj/audit/main.py:1190:2
+1189			report_dir = tempfile.mkdtemp(prefix=f'packj_audit_', dir=container_mountpoint)
+1190			os.chmod(report_dir, 0o755)
+1191		except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/osv.py:20:1
+19			pm_name = 'nuget'
+20		assert pm_name in ['PyPI', 'npm', 'RubyGems','cargo','packagist','nuget', 'maven'], "CVE checking for package manager %s not supported" % (pm_name)
+21		data = {
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/audit/osv.py:29:8
+28		url = 'https://api.osv.dev/v1/query'
+29		resp = requests.post(url=url, json=data)
+30		resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/osv.py:39:2
+38				return []
+39			assert 'vulns' in vuln_data_dict, "invalid CVE data format: 'vulns' missing!"
+40	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/osv.py:42:2
+41			vuln_data_list = vuln_data_dict['vulns']
+42			assert isinstance(vuln_data_list, list), "invalid CVE data format: not a list!"
+43	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_apis.py:23:1
+22		apis2perms_filepath = os.path.join(api_dir, 'apis2perms.csv')
+23		assert os.path.exists(apis2perms_filepath), f'{apis2perms_filepath} does not exist'
+24	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_composition.py:7:2
+6		try:
+7			assert os.path.exists(filepath), f'{filepath} does not exist!'
+8			assert os.path.isfile(filepath), f'{filepath} is not a file!'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_composition.py:8:2
+7			assert os.path.exists(filepath), f'{filepath} does not exist!'
+8			assert os.path.isfile(filepath), f'{filepath} is not a file!'
+9	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_composition.py:11:2
+10			data = read_json_from_file(filepath)
+11			assert data and len(data), 'invalid data!'
+12	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/parse_composition.py:25:4
+24							lang_files += 1
+25					except:
+26						pass
+27					try:
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/parse_composition.py:30:4
+29							bin_files += 1
+30					except:
+31						pass
+32					try:
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/parse_composition.py:34:4
+33						total_loc += f['LoC']
+34					except:
+35						pass
+36	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:5:1
+4	def parse_repo_data(service, repo_data):
+5		assert repo_data, "no data!"
+6		assert service in ['gitlab','github'], 'service %s not supported!' % (service)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:6:1
+5		assert repo_data, "no data!"
+6		assert service in ['gitlab','github'], 'service %s not supported!' % (service)
+7	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:98:1
+97			gl = gitlab.Gitlab('https://gitlab.com', api_version=4)
+98		assert gl, "NULL gl!"
+99	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:101:1
+100		repository = gl.projects.get(repo_id)
+101		assert repository, "repo not found!"
+102	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:113:1
+112			gh = GitHub()
+113		assert gh, "NULL gh!"
+114	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_repo.py:123:1
+122		repository = gh.repository(owner = owner, repository = repo_name)
+123		assert repository, "repo not found!"
+124	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_strace.py:28:1
+27	 
+28		assert summary, "no input"
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/parse_strace.py:58:1
+57	def parse_filesystem_activity(summary:dict):
+58		assert summary, "no input"
+59	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_nodejs.py:39:2
+38			pkg_json_path = os.path.join(pkg_name, 'package.json')
+39			assert os.path.isdir(pkg_name) and os.path.isfile(pkg_json_path), 'invalid package path or package.json is not found'
+40			try:
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:51:4
+50							print(kwarg.arg, kwarg.value)
+51					except Exception as e:
+52						pass
+53	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:107:4
+106					dep = self.__parse_string_for_dep_info(line)
+107					assert dep, "failed"
+108	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:122:3
+121					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+122				assert pkg_info, "Failed to get metadata!"
+123	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:125:3
+124				ver_str = pkg_info.get('version', None)
+125				assert ver_str, "No package version string found in metadata'"
+126	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:138:3
+137					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+138				assert pkg_info, "Failed to get metadata!"
+139	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:152:3
+151					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+152				assert pkg_info, "Failed to fetch metadata!"
+153	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:166:3
+165					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+166				assert pkg_info, "Failed to fetch metadata!"
+167	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:183:3
+182					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+183				assert pkg_info, "Failed to fetch metadata!"
+184	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:200:3
+199					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+200				assert pkg_info, "Failed to fetch metadata!"
+201	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/local_python.py:236:3
+235					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+236				assert pkg_info, "Failed to fetch metadata!"
+237	
+
+--------------------------------------------------
+>> Issue: [B405:blacklist] Using fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace fromstring with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.
+   Severity: Low   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b405-import-xml-etree
+   Location: /code/packj/audit/pm_proxy/maven.py:6:0
+5	from os.path import join, exists, basename, expanduser
+6	from xml.etree.ElementTree import fromstring, tostring
+7	
+
+--------------------------------------------------
+>> Issue: [B314:blacklist] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b313-b320-xml-bad-elementtree
+   Location: /code/packj/audit/pm_proxy/maven.py:30:23
+29	            resp.raise_for_status()
+30	            pkg_info = fromstring(resp.text)
+31	        except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B314:blacklist] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b313-b320-xml-bad-elementtree
+   Location: /code/packj/audit/pm_proxy/maven.py:45:28
+44	            # https://stackoverflow.com/questions/16802732/reading-maven-pom-xml-in-python
+45	            versions_info = fromstring(versions_content.text)
+46	            if versions_info:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/maven.py:78:12
+77	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+78	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+79	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/maven.py:95:12
+94	                _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+95	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+96	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/maven.py:112:12
+111	                _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+112	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+113	            
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:65:7
+64				url = 'https://api.npmjs.org/downloads/point/last-week/' + pkg_name
+65				r = requests.get(url)
+66				r.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:94:2
+93				_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+94			assert pkg_info and isinstance(pkg_info, dict), "invalid metadata!"
+95			return pkg_info.get('homepage', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:101:2
+100				_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+101			assert pkg_info and 'time' in pkg_info, "package not found!"
+102	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:114:4
+113				try:
+114					assert ts, 'No release timestamp'
+115					date = dateutil.parser.parse(ts)
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:123:4
+122						days = datetime_delta(date, date2=last_date, days=True)
+123					except:
+124						pass
+125				last_date = date
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:149:2
+148				_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+149			assert pkg_info and 'versions' in pkg_info, "package not found!"
+150			try:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:157:2
+156	
+157			assert ver_info and 'version' in ver_info, "invalid version metadata!"
+158			try:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:179:3
+178					_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+179				assert pkg_info and 'versions' in pkg_info, "package not found!"
+180				ver_info = self.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:181:2
+180				ver_info = self.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+181			assert ver_info and 'repository' in ver_info, "invalid version metadata!"
+182			repo_info = ver_info['repository']
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:193:3
+192					_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+193				assert pkg_info and 'versions' in pkg_info, "invalid metadata!"
+194				if not ver_info:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:196:3
+195					ver_info = self.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+196				assert ver_info and isinstance(ver_info, dict), "invalid ver metadata!"
+197				return ver_info.get('dependencies', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:205:2
+204				_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+205			assert pkg_info and isinstance(pkg_info, dict), "invalid metadata!"
+206			return pkg_info.get('description', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:211:2
+210				_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+211			assert pkg_info and isinstance(pkg_info, dict), "invalid metadata!"
+212			return pkg_info.get('readme', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:243:3
+242					_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+243				assert pkg_info and 'versions' in pkg_info, "invalid metadata!"
+244	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:246:2
+245				ver_info = self.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+246			assert ver_info, "invalid metadata!"
+247	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:255:3
+254					_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+255				assert pkg_info and 'versions' in pkg_info, "invalid metadata!"
+256	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/npmjs.py:258:2
+257				ver_info = self.get_version(pkg_name, ver_str=ver_str, pkg_info=pkg_info)
+258			assert ver_info, "invalid metadata!"
+259	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:44:8
+43	            _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+44	        assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+45	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:62:12
+61	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+62	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+63	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:81:12
+80	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+81	            assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+82	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:104:12
+103	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+104	            assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+105	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:125:12
+124	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+125	            assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+126	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:150:12
+149	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+150	            assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+151	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:170:12
+169	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+170	            assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+171	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:199:8
+198	            _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+199	        assert pkg_info and 'items' in pkg_info, "Failed to fetch metadata!"
+200	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/nuget.py:215:16
+214	                    days = datetime_delta(date, date2=last_date, days=True)
+215	                except:
+216	                    pass
+217	            last_date = date
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:39:8
+38	            _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+39	        assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+40	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:58:12
+57	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+58	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+59	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:72:12
+71	                _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+72	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+73	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:82:12
+81	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+82	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+83	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:96:12
+95	                _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+96	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+97	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:133:12
+132	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+133	            assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+134	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:153:8
+152	            _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+153	        assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+154	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:162:12
+161	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+162	            assert pkg_info and 'description' in pkg_info, "Failed to fetch metadata!"
+163	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:185:16
+184	                    _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+185	                assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+186	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:211:8
+210	        _, pkg_info =self.get_metadata(pkg_name=pkg_name)
+211	        assert pkg_info and 'package' in pkg_info, "Failed to fetch metadata!"
+212	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:213:8
+212	        
+213	        assert 'versions' in pkg_info['package'] and pkg_info['package'], "No release info found!"
+214	        vers_info=pkg_info['package']['versions']
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/packagist_php.py:231:16
+230	                    days = datetime_delta(date, date2=last_date, days=True)
+231	                except:
+232	                    pass
+233	            last_date = date
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: /code/packj/audit/pm_proxy/pm_base.py:5:0
+4	import logging
+5	import pickle
+6	import datetime
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:80:4
+79					dep = self.__parse_string_for_dep_info(line)
+80					assert dep, "failed"
+81	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:92:2
+91			_, pkg_info = self.get_metadata(pkg_name=pkg_name)
+92			assert pkg_info and 'info' in pkg_info, "Failed to fetch metadata!"
+93			# skip versions that don't have a distribution
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:94:2
+93			# skip versions that don't have a distribution
+94			assert 'releases' in pkg_info and pkg_info['releases'], 'No release info found!'
+95	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:110:4
+109						days = datetime_delta(date, date2=last_date, days=True)
+110					except:
+111						pass
+112				last_date = date
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:129:2
+128				_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+129			assert pkg_info and 'info' in pkg_info, "Failed to fetch metadata!"
+130			if not ver_str:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:152:3
+151					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+152				assert pkg_info, "Failed to fetch metadata!"
+153	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:155:3
+154				info = pkg_info.get('info', None)
+155				assert info, "Invalid metadata!"
+156	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:172:3
+171					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+172				assert pkg_info, "Failed to fetch metadata!"
+173	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:175:3
+174				info = pkg_info.get('info', None)
+175				assert info, "Invalid metadata!"
+176	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:189:3
+188					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+189				assert pkg_info, "Failed to fetch metadata!"
+190	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:192:3
+191				info = pkg_info.get('info', None)
+192				assert info, "Invalid metadata!"
+193	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:206:3
+205					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+206				assert pkg_info, "Failed to fetch metadata!"
+207	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:209:3
+208				info = pkg_info.get('info', None)
+209				assert info, "Invalid metadata!"
+210	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:212:3
+211				proj_urls = info.get('project_urls', None)
+212				assert proj_urls, "No project URLs!"
+213	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:226:3
+225					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+226				assert pkg_info, "Failed to fetch metadata!"
+227	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:229:3
+228				info = pkg_info.get('info', None)
+229				assert info, "Invalid metadata!"
+230	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:232:3
+231				proj_urls = info.get('project_urls', None)
+232				assert proj_urls, "No project URLs!"
+233	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:257:7
+256				url = BASE_URL + endpoint.lower()
+257				r = requests.get(url, headers={"User-Agent": USER_AGENT})
+258				r.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:269:3
+268					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+269				assert pkg_info, "Failed to fetch metadata!"
+270	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:272:3
+271				info = pkg_info.get('info', None)
+272				assert info, "Invalid metadata!"
+273	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:278:3
+277				proj_urls = info.get('project_urls', None)
+278				assert proj_urls, "No project URLs!"
+279	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:311:3
+310					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+311				assert pkg_info and 'info' in pkg_info, "Failed to fetch metadata!"
+312	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/pypi.py:334:3
+333					_, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+334				assert pkg_info and 'info' in pkg_info, "Failed to fetch metadata!"
+335	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:40:3
+39				name_re = re.search(r"(.*)\(", line)
+40				assert name_re, "No name match found"
+41				name = name_re.group(0).replace('(', '')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:44:3
+43				version_re = re.search(r"\((.*?)\)", line)
+44				assert version_re, "No version match found"
+45				version = version_re.group(0).replace('(', '').replace(')', '')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:123:2
+122				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+123			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+124			if not ver_str:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:138:2
+137				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+138			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+139			return pkg_info.get('info', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:144:2
+143				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+144			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+145			return pkg_info.get('documentation_uri')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:161:2
+160			ordered_data = sorted(ver_list,key=lambda x : date_str_to_datetime(x['created_at']))
+161			assert ordered_data, "Failed to sort release_history!"
+162	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:183:4
+182						days = datetime_delta(date, date2=last_date, days=True)
+183					except:
+184						pass
+185				last_date = date
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:201:2
+200				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+201			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+202			return pkg_info.get('gem_uri', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:207:2
+206				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+207			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+208			return pkg_info.get('source_code_uri', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:213:2
+212				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+213			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+214			downloads = pkg_info.get('downloads', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:222:2
+221				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+222			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+223			return pkg_info.get('homepage_uri', None)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:256:3
+255			try:
+256				assert uid, "NULL user ID!"
+257				url = f'https://rubygems.org/api/v1/profiles/{uid}.json'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:269:3
+268			try:
+269				assert pkg_name, "NULL pkg name!"
+270				url = f'https://rubygems.org/api/v1/gems/{pkg_name}/owners.json'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:282:3
+281			try:
+282				assert uid, "NULL user ID!"
+283				url = f'https://rubygems.org/api/v1/owners/{uid}/gems.json'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:323:2
+322				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+323			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+324	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:332:2
+331				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+332			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+333	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rubygems.py:341:2
+340				_,pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+341			assert pkg_info and 'version' in pkg_info, "Invalid metadata!"
+342	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:48:8
+47	            _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+48	        assert pkg_info and 'crate' in pkg_info, "Failed to fetch metedata!"
+49	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:64:12
+63	                _, pkg_info = self.get_metadata(pkg_name=pkg_name,pkg_version=ver_str)
+64	            assert pkg_info, "Failed to fetch metadata!"
+65	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:81:12
+80	                _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+81	            assert pkg_info, "Failed to fetch metadata!"
+82	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:91:12
+90	                _, pkg_info = self.get_metadata(pkg_name=pkg_name,pkg_version=ver_str)
+91	            assert pkg_info, "Failed to fetch metadata!"
+92	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:94:12
+93	            info = pkg_info.get('crate',None)
+94	            assert info, "Invalid metadata!"
+95	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:109:12
+108	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+109	            assert pkg_info, "Failed to fetch metadata!"
+110	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:124:12
+123	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+124	            assert pkg_info, "Failed to fetch metadata!"
+125	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:127:12
+126	            crate_info = pkg_info.get('crate',None)
+127	            assert crate_info, 'Invalid metadata!'
+128	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:141:12
+140	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+141	            assert pkg_info, "Failed to fetch metadata!"
+142	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:160:12
+159	                _, pkg_info = self.get_metadata(pkg_name=pkg_name, pkg_version=ver_str)
+160	            assert pkg_info, "Failed to fetch metadata!"
+161	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:175:12
+174	                ver_str=dict_ver['tag']
+175	            assert ver_str, "Failed to get version of the package %s!"%(pkg_name)
+176	            
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:200:8
+199	        _, pkg_info = self.get_metadata(pkg_name=pkg_name)
+200	        assert pkg_info and 'crate' in pkg_info, "Failed to fetch metadata!"
+201	        
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:202:8
+201	        
+202	        assert 'versions' in pkg_info and pkg_info['versions'], "No release info found!"
+203	        history = {}
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/pm_proxy/rust.py:214:16
+213	                    days=datetime_delta(date, date2=last_date,days=True)
+214	                except:
+215	                    pass
+216	            last_date=date
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/pm_proxy/rust.py:235:12
+234	            info = response.json()
+235	            assert info, "Failed to fetch info from GitHub API"
+236	            for events in info:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/static_proxy/java_analyzer.py:87:12
+86	            stdout, stderr, error = exec_command("java astgen", astgen_cmd, cwd="packj/audit/static_proxy/astgen-java")
+87	            assert not error, "could not generate AST"
+88	        except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: /code/packj/audit/static_proxy/js_analyzer.py:7:0
+6	import esprima
+7	import subprocess
+8	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/static_proxy/js_analyzer.py:125:2
+124					self.declrefs.append((base, name, tuple(args), source_text, source_range))
+125			except:
+126				pass
+127	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/audit/static_proxy/js_analyzer.py:186:2
+185	
+186			except:
+187				pass
+188	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/static_proxy/py_analyzer.py:37:12
+36	            stdout, stderr, error = exec_command("python2 astgen", astgen_py2_cmd, cwd="static_proxy", redirect_mask=3)
+37	            assert not error, 'could not generate AST'
+38	        except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/static_proxy/ruby_analyzer.py:60:2
+59			astgen_bin = os.path.join(cwd, 'astgen.rb')
+60			assert os.path.exists(astgen_bin), f'{astgen_bin} does not exist'
+61	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/static_proxy/ruby_analyzer.py:74:3
+73				stdout, stderr, error = exec_command('ruby astgen', astgen_cmd, redirect_mask=3)
+74				assert not error, "could not generate AST"
+75			except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/static_proxy/static_base.py:67:16
+66	                stdout, stderr, error = exec_command("gem unpack", gem_unpack_cmd, redirect_mask=3)
+67	                assert not error, "could not unpack gem!"
+68	                is_decompress_path = True
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b307-eval
+   Location: /code/packj/audit/static_proxy/static_base.py:242:20
+241	
+242	        satisfied = eval(smt_formula)
+243	        logging.warning("satisfiability = %s", satisfied)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/audit/strace_parser/strace.py:208:16
+207	            if expect_comma:
+208	                assert quote_type is None
+209	                if c == '.':
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/auth/main.py:37:9
+36			url = base_url + start_session_endpoint
+37			resp = requests.post(url=url, params=params, headers=headers)
+38			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/auth/main.py:87:10
+86	
+87			state = sha1(str(random()).encode('utf-8')).hexdigest()
+88			params = {
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/packj/auth/main.py:87:19
+86	
+87			state = sha1(str(random()).encode('utf-8')).hexdigest()
+88			params = {
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/auth/main.py:98:9
+97	
+98			resp = requests.post(url=url, params=params, headers=headers)
+99			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/auth/main.py:162:9
+161			logging.debug(f'POST url {url} params {params}')
+162			resp = requests.post(url=url, params=params, headers=headers)
+163			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/auth/main.py:218:10
+217	
+218			state = sha1(str(random()).encode('utf-8')).hexdigest()
+219			params = {
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/packj/auth/main.py:218:19
+217	
+218			state = sha1(str(random()).encode('utf-8')).hexdigest()
+219			params = {
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/auth/main.py:230:9
+229	
+230			resp = requests.post(url=url, params=params, headers=headers)
+231			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/auth/main.py:241:2
+240	
+241			assert 'error' not in response_data, response_data['error']
+242			if 'state' in response_data:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/auth/main.py:281:10
+280	
+281			state = sha1(str(random()).encode('utf-8')).hexdigest()
+282	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: /code/packj/auth/main.py:281:19
+280	
+281			state = sha1(str(random()).encode('utf-8')).hexdigest()
+282	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/auth/main.py:311:9
+310			# talk to the server
+311			resp = requests.post(url=url, params=params, headers=headers)
+312			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/main.py:18:2
+17			opts = Options(sys.argv[1:])
+18			assert opts, 'Failed to parse cmdline args!'
+19	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/main.py:21:2
+20			args = opts.args()
+21			assert args, 'Failed to get cmdline args!'
+22	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/main.py:32:2
+31				config = os.path.expanduser(os.path.join('~', f'{config}'))
+32			assert os.path.exists(config), f'No {config} file found'
+33	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:23:1
+22	def add_process_rule(key, val):
+23		assert key in ['allow', 'block'], f'invalid {category} rule {k}, supported allow/block'
+24		return f'\t{key}:{val}\n'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:27:1
+26	def add_fs_rule(key, val):
+27		assert key in ['allow', 'block'], f'invalid {category} rule {k}, supported allow/block'
+28		if key == 'block': key = 'hide'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:32:1
+31	def add_network_rule(key, val, port='*', domain='unknown'):
+32		assert key in ['allow', 'block'], f'invalid {category} rule {k}, supported allow/block/kill'
+33		if key == 'block': key = 'kill'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:61:4
+60					family, typ, proto, canonname, sockaddr = r
+61					assert family and sockaddr
+62					if family == socket.AF_INET6:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:64:5
+63						ip_addr, _, _, _ = sockaddr
+64						assert ip_addr
+65						ipv6_addr_list.append((ip_addr, port, domain, 'v6'))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:68:5
+67						ip_addr, _ = sockaddr
+68						assert ip_addr
+69						ipv4_addr_list.append((ip_addr, port, domain, 'v4'))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:91:4
+90					rule_parser = rule_parsers.get(category, None)
+91					assert rule_parser, f'invalid category: {category}'
+92	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:107:3
+106				dns_ips = get_dns_ips()
+107				assert dns_ips and isinstance(dns_ips, list), 'invalid DNS'
+108				logging.debug(f'Allowing {len(dns_ips)} DNS servers: {dns_ips}')
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:159:2
+158			fs_tree_root = TreeNode(sandbox_root, None)
+159			assert fs_tree_root, "couldn't build filesystem tree"
+160	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:208:1
+207			sandbox_path = os.path.join(sandbox_path, name)
+208		assert os.path.exists(sandbox_path), f'"{sandbox_path}" does not exist'
+209	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/sandbox/main.py:314:3
+313							os.remove(dst)
+314				except:
+315					pass
+316	
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/packj/sandbox/main.py:320:1
+319			shutil.rmtree(sandbox_root)
+320		except:
+321			pass
+322	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:473:1
+472		sandbox_root = sys.argv[1]
+473		assert os.path.exists(sandbox_root), f'{sandbox_root} does not exist'
+474	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/sandbox/main.py:476:1
+475		sandbox_logfile = sandbox_root + '.csv'
+476		assert os.path.exists(sandbox_logfile), f'{sandbox_logfile} does not exist'
+477	
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/packj/util/compress_files.py:194:8
+193	        #logging.warning("writing content to %s", extract_dir)
+194	        file_obj.extractall(extract_dir)
+195	    else:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b307-eval
+   Location: /code/packj/util/files.py:115:10
+114			with open(filename, 'r') as f:
+115				data = eval(f.read())
+116				f.close()
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html
+   Location: /code/packj/util/files.py:186:8
+185	    with tarfile.open(file_path, "r:gz") as tar:
+186	        tar.extractall()
+187	        for member in tar.getmembers():
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: /code/packj/util/job_util.py:7:0
+6	import signal
+7	from subprocess import PIPE, Popen
+8	from google.protobuf.text_format import MessageToString, Merge
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/util/job_util.py:26:8
+25		import hashlib
+26		return hashlib.md5(s.encode('utf-8')).digest()
+27	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/util/job_util.py:30:12
+29		import hashlib
+30		return int(hashlib.md5(s.encode('utf-8')).hexdigest(), 16)
+31	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html
+   Location: /code/packj/util/job_util.py:50:8
+49		import hashlib
+50		return hashlib.md5(open(filepath,'rb').read()).hexdigest()
+51	
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: /code/packj/util/job_util.py:103:9
+102	
+103			pipe = Popen(args, cwd=cwd, env=env, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+104			current_subprocs.add(pipe)
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: /code/packj/util/net.py:26:9
+25				from urllib.request import urlopen
+26			return urlopen(url)
+27		except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: /code/packj/util/net.py:85:1
+84	def download_file(url, filepath=None, mode='wb+'):
+85		assert url, "NULL url"
+86		if not filepath:
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/util/net.py:109:9
+108			import requests
+109			resp = requests.get(url=url, headers=headers, params=params)
+110			resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b113_request_without_timeout.html
+   Location: /code/packj/util/net.py:121:7
+120			import requests
+121			with requests.get(url=url, headers=headers, params=params, stream=True) as resp:
+122				resp.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: /code/setup.py:12:0
+11	import shutil
+12	import os, sys, subprocess
+13	
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b602_subprocess_popen_with_shell_equals_true.html
+   Location: /code/setup.py:36:16
+35										 stderr=subprocess.PIPE,
+36										 shell=True)
+37		stderr = make_process.communicate()
+38	
+39		if make_process.returncode:
+40			raise Exception(f'Failed to install sandbox:\n{stderr}')
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/setup.py:46:1
+45			os.remove(path)
+46		except:
+47			pass
+48		shutil.copy(config, path)
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b110_try_except_pass.html
+   Location: /code/setup.py:54:1
+53			os.remove(path)
+54		except:
+55			pass
+56	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 9833
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 176
+		Medium: 17
+		High: 9
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 10
+		Medium: 1
+		High: 191
+Files skipped (0):

@@ -1,3 +1,21 @@
 [submodule "assignment2/spring-boot"]
 	path = assignment2/spring-boot
 	url = git@github.com:spring-projects/spring-boot.git
+[submodule "assignment3/samples/TransTroj"]
+	path = assignment3/samples/TransTroj
+	url = https://github.com/haowang02/TransTroj
+[submodule "assignment3/samples/packj"]
+	path = assignment3/samples/packj
+	url = git@github.com:ossillate-inc/packj.git
+[submodule "assignment3/samples/cube"]
+	path = assignment3/samples/cube
+	url = git@github.com:Roblox/cube.git
+[submodule "assignment3/samples/HealthGPT"]
+	path = assignment3/samples/HealthGPT
+	url = git@github.com:DCDmllm/HealthGPT.git
+[submodule "assignment3/samples/Dank-Learning"]
+	path = assignment3/samples/Dank-Learning
+	url = git@github.com:alpv95/Dank-Learning.git
+[submodule "assignment3/samples/naacl2025-a-template-is-all-you-meme"]
+	path = assignment3/samples/naacl2025-a-template-is-all-you-meme
+	url = git@github.com:UKPLab/naacl2025-a-template-is-all-you-meme.git
